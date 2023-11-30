@@ -8,7 +8,7 @@ import SearchIcon from './SearchIcon'
 const Navbar = () => {
   const user = false
   return (
-    <div className="sticky h-24 top-0 bg-white">
+    <div className="sticky h-24 top-0 z-10 bg-white">
       <div className="h-20 p-2 flex items-center justify-between ">
 
         {/* LOGO */}

@@ -34,9 +34,9 @@ export const featuredProducts: Products = [
   },
   {
     id: 2,
-    title: "Burga pizza",
-    desc: "This is burga pizza",
-    img: "/images/bread.jpg",
+    title: "Hamburger pizza",
+    desc: "This is hamburger pizza",
+    img: "/images/hamburger.jpg",
     price: 20,
     options: [
       {
@@ -78,7 +78,7 @@ export const featuredProducts: Products = [
     id: 4,
     title: "New Pizza",
     desc: "This is a new pizza",
-    img: "/images/pizza_image.png",
+    img: "/images/pizza4.png",
     price: 40,
     options: [
       {
@@ -251,9 +251,9 @@ export const pizzas: Products = [
   },
   {
     id: 6,
-    title: "Greek Pizza",
-    desc: "This is Greek pizza",
-    img: "/images/pizza_full.png",
+    title: "Yummy Pizza",
+    desc: "This is Yummy pizza",
+    img: "/images/yummy_pizza.png",
     price: 40,
     options: [
       {
@@ -292,6 +292,7 @@ export const singleProduct: Product = {
         additionalPrice: 6,
     },
   ],
+  
 };
 
 
