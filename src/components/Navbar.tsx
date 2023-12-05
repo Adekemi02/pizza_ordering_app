@@ -28,7 +28,7 @@ const Navbar = () => {
         {/* MEDIUM SCREEN MENU */}
         <div className = "hidden md:flex gap-4 justify-center items-center h-8 mt-4 p-2 text-center font-semibold text-sm">
           <Link href="/"> HOME </Link>
-          <Link href="/products"> PRODUCTS </Link>
+          <Link href="/menu/burger"> PRODUCTS </Link>
           <Link href="/pages"> PAGES </Link>
           <Link href="/blog"> BLOG </Link>
           <Link href="/contacts"> CONTACT </Link>

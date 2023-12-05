@@ -12,7 +12,7 @@ const Products = () => {
       {pizzas.map((item) => (
         
         <div key={item.id} className="border h-[500px]">
-          <Link className="" href="">
+          <Link className="" href="/product/1">
             {item.img && (
               <div className="h-1/2 p-4">
                 <Image src={item.img} alt="" width={300} height={300} />
