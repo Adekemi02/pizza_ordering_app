@@ -1,8 +1,26 @@
+"use client"
 import { singleProduct } from '@/app/data'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-const singleProductPage = () => {
+
+type Props = {
+  price: number;
+  id: number;
+  options?: {title: string; additionalPrice: number}[];
+};
+
+const singleProductPage = ({price, id, options}: Props) => {
+  const [total, setTotal] = useState(price);
+  const [quantity, setQuantity] = useState(1)
+  const [selected, setSelected] = useState(0)
+
+  useEffect(() => {
+    setTotal(
+      quantity * (options ? price + options[selected].additionalPrice : price)
+    )
+  }, [quantity, selected, options, price]);
+
   return (
     <div className="flex gap-16 mt-10 px-6">
       {/* Imgage container */}
@@ -33,21 +51,25 @@ const singleProductPage = () => {
 
         <div className="mt-8">
           <h1 className="font-semibold mb-4"> Choose Pizza Size </h1>
+          
+          
           <div className="flex items-center ">
             <div className="flex">
               <Image src="/images/pizza_size.png" alt="" width={30} height={30} />
               <span className="relative -top-2.5 -left-4 rounded-full  px-1 text-sm text-white font-semibold h-5 text-center w-12  bg-red-500 "> Small </span>
             </div>
+
             <div className="flex">
               <Image src="/images/pizza_size.png" alt="" width={40} height={40} />
               <span className="relative -top-2 -left-6 rounded-full  px-1 text-sm text-white font-semibold h-5 text-center w-16  bg-red-500 "> Medium </span>
             </div>
+
             <div className="flex">
               <Image src="/images/pizza_size.png" alt="" width={50} height={50} />
-              <span className="relative -top-2.5 -left-4 rounded-full  px-1 text-sm text-white font-semibold h-5 text-center w-12  bg-red-500 "> Large </span>
+              <span className="relative -top-2.5 -left-4 rounded-full  px-1 text-sm text-white font-semibold h-5 text-center w-12  bg-red-500 "> Large</span>
             </div>
-          
           </div>
+          
 
           <div className="mt-10 font-semibold">
             <h1 className="mb-2"> Choose additional ingredients </h1>
