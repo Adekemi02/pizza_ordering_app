@@ -4,11 +4,10 @@ type Product = {
   desc?: string;
   img?: string;
   price: number;
-  options?: { title: string; additionalPrice: number }[];
+  options?: { title: string; additionalPrice: number; width: number; height: number }[];
 };
 
 type Products = Product[];
-
 
 export const featuredProducts: Products = [
   {
@@ -21,14 +20,20 @@ export const featuredProducts: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -42,14 +47,20 @@ export const featuredProducts: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -63,14 +74,22 @@ export const featuredProducts: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
+      
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
+                        
       },
     ],
   },
@@ -84,14 +103,20 @@ export const featuredProducts: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -105,14 +130,20 @@ export const featuredProducts: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -126,14 +157,20 @@ export const featuredProducts: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -154,14 +191,20 @@ export const pizzas: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -175,14 +218,20 @@ export const pizzas: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -196,14 +245,20 @@ export const pizzas: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -217,14 +272,20 @@ export const pizzas: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -238,14 +299,20 @@ export const pizzas: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -259,14 +326,20 @@ export const pizzas: Products = [
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
       },
     ],
   },
@@ -282,19 +355,39 @@ export const singleProduct: Product = {
       {
         title: "Small",
         additionalPrice: 0,
+        width: 30,
+        height: 30,
       },
       {
         title: "Medium",
         additionalPrice: 4,
+        width: 40,
+        height: 40,
       },
       {
         title: "Large",
         additionalPrice: 6,
+        width: 50,
+        height: 50,
     },
   ],
   
 };
 
+
+type PizzaSize = {
+  sizeTitle: string;
+  width: number;
+  height: number;
+}[];
+
+export const PizzaSizes: PizzaSize = [
+  {
+    sizeTitle: "Small",
+    width: 30,
+    height: 30,
+  }
+]
 
 type Strengths = {
   id: number;

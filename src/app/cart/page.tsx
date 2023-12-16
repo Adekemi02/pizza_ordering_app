@@ -4,59 +4,43 @@ import React from 'react'
 const cartPage = () => {
   return (
     <div className='w-full px-4 flex justify-start  items-start mt-11'>
-      <div className="grid w-[85%]">
-        <div className="grid grid-cols-6 py-3 font-bold border-b-2 border-b-gray-200 mb-2">
-          <div className=""> Product </div>
-          <div className=""> Name </div>
-          <div>Extra </div>
-          <div>Price </div>
-          <div>Quantity </div>
-          <div> Total </div>
-        </div>
-
-        <div className="h-[120px] grid grid-cols-6 border-b-2 border-b-gray-200">
-          <div>
-            <Image src="/images/pizza_full.png" alt="" width={90} height={90} />
-          </div>
-          <div> Burga pizza </div>
-          <div></div>
-          <div> $40 </div>
-          <div> 4 </div>
-          <div> $160 </div>
-        </div>
-        
+      {/* PRODUCT TABLE */}
+      <div className="w-full">
+        <table className="w-full">
+          <thead className="border-b border-b-gray-200">
+            <tr className="text-left">
+              <th className="mb-2 py-2">Product</th>
+              <th className="mb-2 py-2">Name</th>
+              <th className="mb-2 py-2">Extra</th>
+              <th className="mb-2 py-2">Price</th>
+              <th className="mb-2 py-2">Quantity</th>
+              <th className="mb-2 py-2">Total</th>
+            </tr>
+          </thead>
+          
+          <tbody className="border-b border-b-gray-200">
+            <tr className="align-top" >
+              <td className="py-2">
+                <Image src="/images/pizza_full.png" alt="" width={70} height={70} /> 
+              </td>
+              <td className=" py-2"> Burga pizza </td>
+              <td className=" py-2"></td>
+              <td className=" py-2">$40</td>
+              <td className=" py-2">4</td>
+              <td className=" py-2">$160</td>
+            </tr>
+          </tbody>                 
+        </table>
       </div>
-      {/* <table className="w-[700px] h-[100px] " style={{tableLayout: "fixed"}}>
-        <thead className="" style={{}}>
-          <tr className=' border-b-2 border-b-gray-200' style={{margin: "0 10px"}}>
-            <th style={{padding: "0 0px"}}>Product</th>
-            <th style={{padding: "0 10px"}}>Name</th>
-            <th style={{padding: "0 10px"}}>Extra</th>
-            <th style={{padding: "0 10px"}}>Price</th>
-            <th style={{padding: "0 10px"}}>Quantity</th>
-            <th style={{padding: "0 10px"}}>Total</th>
-          </tr>
-        </thead>
-        
-        <tbody>
-          <tr className="text-center border-b-2 border-b-gray-200 gap-8" >
-            <td><Image src="/images/pizza_full.png" alt="" width={30} height={30} /> </td>
-            <td> Burga pizza </td>
-            <td></td>
-            <td>$40</td>
-            <td>4</td>
-            <td>$160</td>
-          </tr>
-        </tbody>          
-       
-      </table> */}
-      <div className="bg-black w-[400px] h-[270px] text-white mr-6">
+
+      {/* CART CONTAINER */}
+      <div className="bg-black w-[500px] h-[270px] text-white mr-6">
         <div className="flex flex-col justify-center mt-8 px-10">
           <h1 className="uppercase text-white font-semibold mb-4"> Cart Total </h1>
           <p> <span className="font-semibold"> Subtotal: $160 </span>  </p>
           <p> <span className="font-semibold"> Discount: $79.60 </span>  </p>
           <p> <span className="font-semibold">Total: $160</span>  </p>
-          <button type="submit" className="mt-10 bg-goldenyellow hover:bg-red-700 font-bold p-2 uppercase rounded-full"> Checkout Now! </button>
+          <button type="submit" className="mt-10 bg-goldenyellow hover:bg-red-700 transition-all duration-300 font-bold p-2 uppercase rounded-full"> Checkout Now! </button>
         </div>
           
       </div>

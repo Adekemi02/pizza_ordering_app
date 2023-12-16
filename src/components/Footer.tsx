@@ -60,7 +60,7 @@ const Footer = () => {
 
             <p> Signup and get exclusive offers and coupon codes </p>
 
-            <button className="bg-goldenyellow text-white font-bold w-24 p-2 rounded-full"> SIGN UP </button>
+            <button className="bg-goldenyellow hover:bg-red-500 transition-all duration-300 text-white font-bold w-24 p-2 rounded-full uppercase"> Sign up </button>
           </div>
         </div>
       </div>
