@@ -19,7 +19,7 @@ const cartPage = () => {
       {/* PRODUCT TABLE */}
       <div className="w-full">
         {
-          products?.map((product) => (
+          
             <table className="w-full">
           <thead className="border-b border-b-gray-200">
             <tr className="text-left">
@@ -32,7 +32,10 @@ const cartPage = () => {
             </tr>
           </thead>
           
-          <tbody className="border-b border-b-gray-200">
+          {
+            products.map((product)=> (
+              <tbody className="border-b border-b-gray-200">
+            
             <tr className="align-top" >
               <td className="py-2">
                 <div className="flex flex-row justify-center items-center">
@@ -47,13 +50,15 @@ const cartPage = () => {
               </td>
               <td className=" py-2"> {product.title} </td>
               <td className=" py-2">{product.options}</td>
-              <td className=" py-2">${product.price}</td>
+              <td className=" py-2">${product.itemPrice}</td>
               <td className=" py-2">{product.quantity}</td>
               <td className=" py-2">${product.price}</td>
             </tr>
-          </tbody>                 
+          </tbody> 
+            ))
+          }                
         </table>
-          ))
+          
         }
       </div>
 
