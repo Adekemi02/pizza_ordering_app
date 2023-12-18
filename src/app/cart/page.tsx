@@ -5,7 +5,7 @@ import Image from 'next/image'
 import React, { useEffect } from 'react'
 import { toast } from 'react-toastify';
 
-const cartPage = () => {
+const CartPage = () => {
 
     const { totalPrice, products, removeFromCart } = usePizzaStore();
   
@@ -77,4 +77,4 @@ const cartPage = () => {
   )
 }
 
-export default cartPage
+export default CartPage
