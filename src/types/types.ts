@@ -13,6 +13,7 @@ export type CartItemType = {
     desc?: string;
     img?: string;
     price: number;
+    itemPrice: number,
     options?: string;
     quantity: number;
 };
