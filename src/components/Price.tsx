@@ -2,6 +2,9 @@
 
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react'
+import { Product } from "@/types/types";
+import { usePizzaStore } from '@/utils/store';
+import { toast } from 'react-toastify';
 
 
 type Props = {
@@ -11,23 +14,46 @@ type Props = {
   options?: {title: string; additionalPrice: number;}[];
 };
 
-const Price = ({price, id, desc, options}: Props) => {
-  const [total, setTotal] = useState(price);
-  const [quantity, setQuantity] = useState(1)
-  const [selected, setSelected] = useState(0)
+// {price, id, desc, options}: Props
+const Price = ({product}: {product: Product}) => {
+  const [total, setTotal] = useState(product.price);
+  const [quantity, setQuantity] = useState(1);
+  const [selected, setSelected] = useState(0);
+
+  const { addToCart, products } = usePizzaStore();
+
+  useEffect(()=> {
+    usePizzaStore.persist.rehydrate();
+  },[]);
 
   useEffect(() => {
-    setTotal(
-      quantity * (options ? price + options[selected].additionalPrice : price)
-    )
-  }, [quantity, selected, options, price]);
+    if (product.options?.length) {
+      setTotal(quantity * product.price + product.options[selected].additionalPrice);
+    }
+  }, [quantity, selected, product]);
+
+  const handleCart = () => {
+    addToCart({
+      id: product.id,
+      price: total,
+      quantity: quantity,
+      title: product.title,
+      desc: product.desc,
+      img: product.img,
+      ...(product.options?.length && { optionTitle: product.options[selected].title }),
+    });
+
+    toast.success("Item added with love from olaide!");
+  };
+
+  console.log(quantity, product.price, total);
 
   return (
     <div>    
       <span className="text-red-500 font-semibold mr-4"> ${total} </span>
       <span className="text-gray-300 font-semibold"> 8 Reviews </span>
       
-      <p className="mt-4"> {desc} </p>
+      <p className="mt-4"> {product.desc} </p>
       <p className="mt-4">Category: Chicken, Launch, Pizza, Burger </p>
       <p className="mt-4"> Tags: Healthy, Organic, Chicken, Sauce </p>
       
@@ -35,7 +61,7 @@ const Price = ({price, id, desc, options}: Props) => {
       
       {/* OPTIONS CONTAINER*/}
       <div className="flex items-center">
-        {options?.map((option, index) => (
+        {product.options?.length && product.options?.map((option, index) => (
           <button key={option.title} className="flex" onClick={() => setSelected(index)}>
               <Image 
                 src="/images/pizza_size.png" 
@@ -76,12 +102,14 @@ const Price = ({price, id, desc, options}: Props) => {
             type="number" 
             min="1" step="1" 
             className="border h-9 w-32"
-            onClick={() => setQuantity}
+            value={quantity}
+            onClick={() => setQuantity(quantity + 1)}
            />
           
           <button
             // onClick={() => addToCart()}
             className="bg-goldenyellow hover:bg-red-500 transition-all duration-300 rounded-full font-semibold uppercase text-white w-32 m-2 py-2"
+            onClick={handleCart}
           > 
             Add to Cart 
           </button>
