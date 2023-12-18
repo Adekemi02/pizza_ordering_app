@@ -36,6 +36,7 @@ const Price = ({product}: {product: Product}) => {
     addToCart({
       id: product.id,
       price: total,
+      itemPrice: product.price,
       quantity: quantity,
       title: product.title,
       desc: product.desc,
