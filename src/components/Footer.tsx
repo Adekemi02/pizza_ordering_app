@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="bg-yellow-50 h-96 w-full gap-6 py-3 flex items-end justify-start ">
         <div className="flex w-full px-4" style={{marginBottom: "25px"}}>
           <div className="flex flex-1 flex-col gap-6">
-            <h2 className="font-bold uppercase"> Information </h2>
+            <h2 className="font-bold"> INFORMATION </h2>
             <Link href="/"> Home </Link>
             <Link href="/blog"> Blog </Link>
             <Link href="/about"> About Us </Link>
@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-1 gap-6 flex-col">
-            <h2 className="font-bold uppercase"> Top items </h2>
+            <h2 className="font-bold"> TOP ITEMS </h2>
               <Link href="/menu/1"> Pepperoni </Link>
               <Link href="/menu/2"> Swiss Mushroom </Link>
               <Link href="/menu/3"> Barbeque Chicken </Link>
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-1 gap-6 flex-col">
-            <h2 className="font-bold uppercase"> Others </h2>
+            <h2 className="font-bold"> OTHERS </h2>
             <Link href="/checkout"> Checkout </Link>
             <Link href="/cart"> Cart </Link>
             <Link href="/product"> Product </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-1 gap-8 flex-col">
-            <h2 className="font-bold uppercase"> Social media </h2>
+            <h2 className="font-bold"> SOCIAL MEDIA </h2>
 
             <div className="flex flex-row gap-4">
               <div className="bg-blue-900 h-9 w-9 flex items-center justify-center">

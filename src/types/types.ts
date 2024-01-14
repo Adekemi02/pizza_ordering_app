@@ -7,27 +7,14 @@ export type Product = {
     options?: { title: string; additionalPrice: number; width: number; height: number }[];
   };
 
-export type ProductType = {
-    id: string;
-    title: string;
-    desc: string;
-    img: string;
-    prices: [number];
-    extraOptions: [{
-        id: string
-        text: string;
-        price: number
-    }]
-}
-
 export type CartItemType = {
-    id: string,
+    id: number,
     title: string;
     desc?: string;
     img?: string;
     price: number;
     itemPrice: number,
-    options?: { id: string; text: string; price: number }[];
+    options?: string;
     quantity: number;
 };
 

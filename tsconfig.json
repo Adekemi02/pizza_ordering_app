@@ -22,16 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/app/api/server/products/route.js",
-    "src/utils/mongo.js",
-    "src/app/models/Product.js",
-    "app/productPage/[id]/page.jsx",
-    "components/Button.tsx"
-, "src/app/models/Order.js"  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

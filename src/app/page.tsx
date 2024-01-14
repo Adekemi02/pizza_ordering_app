@@ -1,9 +1,7 @@
-import Feedback from '../components/Feedback'
-import Intro from '../components/Intro'
-import Offer from '../components/Offers'
-import Strength from '../components/Strength'
-
-
+import Feedback from '@/components/Feedback'
+import Intro from '@/components/Intro'
+import Offer from '@/components/Offers'
+import Strength from '@/components/Strength'
 
 
 export default function Home() {
@@ -16,5 +14,3 @@ export default function Home() {
     </main>
   )
 }
-
-
