@@ -4,9 +4,12 @@ import Image from 'next/image'
 import Menu from './Menu'
 import CartIcon from './CartIcon'
 import SearchIcon from './SearchIcon'
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const user = false
+  // const quantity = useSelector((state: any) => state.cart.quantity);
+
   return (
     <div className="sticky h-24 top-0 z-10 bg-white">
       <div className="h-20 p-2 flex items-center justify-between ">
@@ -26,16 +29,16 @@ const Navbar = () => {
         </div>
 
         {/* MEDIUM SCREEN MENU */}
-        <div className = "hidden md:flex gap-4 justify-center items-center h-8 mt-4 p-2 text-center font-semibold text-sm">
-          <Link href="/"> HOME </Link>
-          <Link href="/menu/burger"> PRODUCTS </Link>
-          <Link href="/pages"> PAGES </Link>
-          <Link href="/blog"> BLOG </Link>
-          <Link href="/contacts"> CONTACT </Link>
+        <div className = "hidden md:flex gap-4 justify-center items-center h-8 mt-4 p-2 text-center font-semibold text-sm uppercase">
+          <Link href="/"> Home </Link>
+          <Link href="/menu"> Products </Link>
+          <Link href="/pages"> Pages </Link>
+          <Link href="/blog"> Blog </Link>
+          <Link href="/contacts"> Contact </Link>
           {!user ? (
-            <Link href="/login"> LOGIN </Link>) 
+            <Link href="/login"> Login </Link>) 
             : (
-              <Link href="order"> ORDERS </Link>)
+              <Link href="order"> Orders </Link>)
           }
           <SearchIcon />
           <CartIcon />
