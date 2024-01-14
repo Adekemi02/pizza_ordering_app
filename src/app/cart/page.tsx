@@ -58,7 +58,7 @@ const cartPage = () => {
             ))
           }                
         </table>
-        // Testing codes
+        
           
         }
       </div>
