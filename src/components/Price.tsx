@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react'
-import { Product } from "@/types/types";
-import { usePizzaStore } from '@/utils/store';
+import { Product } from "../types/types";
+import { usePizzaStore } from '../utils/store';
 import { toast } from 'react-toastify';
 
 
@@ -39,12 +39,12 @@ const Price = ({product}: {product: Product}) => {
       itemPrice: product.price,
       quantity: quantity,
       title: product.title,
-      desc: product.desc,
-      img: product.img,
+      // desc: product.desc,
+      // img: product.img,
       ...(product.options?.length && { optionTitle: product.options[selected].title }),
     });
 
-    toast.success("Item added with love from olaide!");
+    toast.success("Item added to cart successfully!");
   };
 
   console.log(quantity, product.price, total);
@@ -95,8 +95,23 @@ const Price = ({product}: {product: Product}) => {
       <div className="mt-10 font-semibold">
         <h1 className="mb-2"> Choose additional ingredients </h1>
         
-        <input type="checkbox" />
-        <label htmlFor="" className="font-normal"> Sauce </label>
+        <input type="checkbox"
+          id="sauce"
+          name="sauce" 
+        />
+        <label htmlFor="sauce" className="font-normal"> Sauce </label>
+
+        <input type="checkbox"
+          id="extra"
+          name="extra" 
+        />
+        <label htmlFor="extra" className="font-normal"> Extra Cheese </label>
+
+        <input type="checkbox"
+          id="spicy"
+          name="spicy" 
+        />
+        <label htmlFor="spicy" className="font-normal"> Spicy </label>
         
         <div className="flex items-center gap-4 mt-6">
           <input 
