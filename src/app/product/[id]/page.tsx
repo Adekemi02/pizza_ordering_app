@@ -9,7 +9,7 @@ import Products from '@/components/Products'
 
 const singleProductPage = () => {
 
-  const singleProduct = pizzas.find((product)=> product.id === 3)
+  const singleProduct = pizzas.find((product)=> product.id === 1)
 
   return (
     <div className="flex gap-16 mt-10 px-6">
