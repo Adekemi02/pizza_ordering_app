@@ -21,6 +21,7 @@ const CartPage = () => {
       {/* PRODUCT TABLE */}
       <div className="w-full">
 <<<<<<< HEAD
+<<<<<<< HEAD
         {
           
             <table className="w-full">
@@ -64,6 +65,8 @@ const CartPage = () => {
         // Testing codes
           
 =======
+=======
+>>>>>>> parent of 2d42504 (Adds backend logic)
         {         
           <table className="w-full">
             <thead className="border-b border-b-gray-200">
@@ -104,6 +107,9 @@ const CartPage = () => {
             )
             )}                
           </table>          
+<<<<<<< HEAD
+>>>>>>> parent of 2d42504 (Adds backend logic)
+=======
 >>>>>>> parent of 2d42504 (Adds backend logic)
         }
       </div>
