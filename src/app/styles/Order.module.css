@@ -1,0 +1,34 @@
+.done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inProgress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: inProgress 1s ease infinite alternate;
+}
+
+@keyframes inProgress {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.undone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.undone .checkedIcon,
+.inProgress .checkedIcon {
+    display: none;
+}
